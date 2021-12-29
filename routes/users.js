@@ -3,6 +3,8 @@ const bcrypt = require("bcrypt");
 const User = require("../models/User");
 
 // userRoute 의 기본경로:/api/users
+//params 는 주소창에 입력하는 입력값
+//body.req 는 postman body에 입력하는 입력값
 
 //update user
 router.put("/:id", async (req, res) => {
@@ -104,4 +106,5 @@ router.put("/:id/unfollow", async (req, res) => {
     res.status(403).json("you cant unfollow youre self");
   }
 });
+
 module.exports = router;
